@@ -1,20 +1,25 @@
-public static void main(String[] args){
+import javax.swing.JOptionPane;
 
-  //Der Benutzer gibt die pro Variable an
+public class firsttest {
+
+	public static void main(String[] args){
+
 		String pro= JOptionPane.showInputDialog(null,"Wie oft soll gerechnet werden?");
-			if (pro == null){ //|| pro.equals(0)){
+		
+			if (pro == null){
 				JOptionPane.showMessageDialog(null,"Programm wird beendet");
-					System.exit(0);}
-			
-				if (pro.equals(0)){
+					System.exit(0);
+			}
+			//pro.length()<=0 zeichenlänge überprüfen
+				if ( pro.equals("0")){
 					JOptionPane.showMessageDialog(null,"Programm wird beendet");
 					System.exit(0);}
 			
-			
-	//pro wird als ganze Zahl angegeben
+				else {
+	
 				int zaehler = Integer.parseInt(pro);
-				//der zu verleichende Wert für die Schleife
-				float x= 0;
+				
+				int x= 0;
 				
 				int y= 0;
 		
@@ -24,11 +29,12 @@ public static void main(String[] args){
 		
 				
 		
-				            //hier wird die Schleife wiederholt, solange zaehler größer als x ist
+				JOptionPane.showMessageDialog(null,"Closed Beta 0.1");
+				
 				while (zaehler>x) {
 					
 					if(y>=3) {y= 0;}
-					//x wird um 1 erhöht
+					
 					x++;
 					
 					
@@ -52,9 +58,9 @@ public static void main(String[] args){
 										break;}
 			
 		
-						float zahlone = Integer.parseInt(zahleins);
-						float zahltwo = Integer.parseInt(zahlzwei);
-						float result = 0;					
+						double zahlone = Integer.parseInt(zahleins);
+						double zahltwo = Integer.parseInt(zahlzwei);
+						double result = 0;					
 								
 						
 						switch (operator){
@@ -86,7 +92,7 @@ public static void main(String[] args){
 								mrx[y] = result;
 								y++;
 								for(double d : mrx){
-									System.out.println(" " + d);
+									System.out.println("" + d);
 								}
 								
 								
@@ -94,9 +100,7 @@ public static void main(String[] args){
 								
 									
 			
-			
+				}
 				}		
 		}
 }
-
-
