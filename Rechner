@@ -1,0 +1,102 @@
+public static void main(String[] args){
+
+  //Der Benutzer gibt die pro Variable an
+		String pro= JOptionPane.showInputDialog(null,"Wie oft soll gerechnet werden?");
+			if (pro == null){ //|| pro.equals(0)){
+				JOptionPane.showMessageDialog(null,"Programm wird beendet");
+					System.exit(0);}
+			
+				if (pro.equals(0)){
+					JOptionPane.showMessageDialog(null,"Programm wird beendet");
+					System.exit(0);}
+			
+			
+	//pro wird als ganze Zahl angegeben
+				int zaehler = Integer.parseInt(pro);
+				//der zu verleichende Wert für die Schleife
+				float x= 0;
+				
+				int y= 0;
+		
+				//marc.reis.79@gmail.com
+		
+				JOptionPane.showMessageDialog(null,"Hallo zum Rechner");
+		
+				
+		
+				            //hier wird die Schleife wiederholt, solange zaehler größer als x ist
+				while (zaehler>x) {
+					
+					if(y>=3) {y= 0;}
+					//x wird um 1 erhöht
+					x++;
+					
+					
+						double [] mrx = new double[3];
+						
+							String operator= JOptionPane.showInputDialog(null,"geb deinen Operator ein");
+			
+							if (operator == null) {
+								JOptionPane.showMessageDialog(null,"Fehler bei der Bearbeitung der Daten.\nProgramm wird beendet");
+								break;}
+							
+				
+								String zahleins= JOptionPane.showInputDialog(null,"gib deine 1. Zahl ein");
+									if (zahleins == null){
+										JOptionPane.showMessageDialog(null,"Fehler bei der Bearbeitung der Daten.\nProgramm wird beendet");
+										break;}
+				
+								String zahlzwei= JOptionPane.showInputDialog(null,"gib deine 2. Zahl ein");
+									if (zahlzwei == null) {
+										JOptionPane.showMessageDialog(null,"Fehler bei der Bearbeitung der Daten.\nProgramm wird beendet");
+										break;}
+			
+		
+						float zahlone = Integer.parseInt(zahleins);
+						float zahltwo = Integer.parseInt(zahlzwei);
+						float result = 0;					
+								
+						
+						switch (operator){
+						
+								
+									
+						
+								case "+":
+									 result = zahlone + zahltwo;
+									break;
+								
+								case "-":
+									 result = zahlone - zahltwo;
+									break;
+								
+								case "*":
+									 result = zahlone * zahltwo;
+									break;
+									
+								case "/":
+									result = zahlone / zahltwo;
+									break;
+								
+								default:
+									JOptionPane.showMessageDialog (null,"kein Operator gegeben!");
+								
+								}
+								
+								mrx[y] = result;
+								y++;
+								for(double d : mrx){
+									System.out.println(" " + d);
+								}
+								
+								
+								JOptionPane.showMessageDialog(null,"Das Ergebnis ist " + result);
+								
+									
+			
+			
+				}		
+		}
+}
+
+
